@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iService</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container mt-4">
+        <section>
+            <h1>Selamat datang di iService</h1>
+            <p class="slogan">iService "Taruh-Tunggu-Selesai"</p>
+            <p>iService menyediakan layanan service iPhone dengan berbagai macam kategori. Berikut ini adalah kategori
+                service yang tersedia:</p>
+            <p>Menerima Antar Jemput Perbaikan iPhone se-Jabodetabek</p>
+            <p>WA: +62-812-3456-7890 || Instagram: @iService.id || TikTok: @iService.id</p>
+            <ul>
+                <li>Service Ringan : Ganti Baterai dan Ganti LCD</li>
+                <li>Service Berat : Ganti Camera, Ganti Speaker, Ganti Mic</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Daftar Harga Service</h2>
+            <p>Berikut ini adalah daftar harga service yang tersedia:</p>
+            <ul>
+                <li><strong>Service Ringan : (Jasa Service Rp. 150.000)</strong>
+                    <ol>
+                        <li>Ganti Baterai : Rp. 100.000</li>
+                        <li>Ganti LCD : Rp. 200.000</li>
+                    </ol>
+                </li>
+                <li><strong>Service Berat : (Jasa Service Rp. 300.000)</strong>
+                    <ol>
+                        <li>Ganti Camera : Rp. 300.000</li>
+                        <li>Ganti Speaker : Rp. 400.000</li>
+                        <li>Ganti Mic : Rp. 500.000</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Formulir Permintaan Service</h2>
+            <p>Silakan isi formulir berikut untuk melakukan permintaan service:</p>
+            <form id="iniForm">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama:</label>
+                    <input type="text" id="nama" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tglService" class="form-label">Tanggal Servis:</label>
+                    <input type="date" id="tglService" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="jenisDevice" class="form-label">Jenis Device:</label>
+                    <input type="text" id="jenisDevice" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="jenisService" class="form-label">Jenis Layanan:</label>
+                    <select id="jenisService" class="form-select">
+                        <option value="">Pilih jenis service</option>
+                        <option value="Service Ringan">Service Ringan</option>
+                        <option value="Service Berat">Service Berat</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="keluhan" class="form-label">Keluhan:</label>
+                    <select id="keluhan" class="form-select">
+                        <option value="">Pilih jenis keluhan</option>
+                        <option value="Ganti Baterai">Ganti Baterai</option>
+                        <option value="Ganti LCD">Ganti LCD</option>
+                        <option value="Ganti Camera">Ganti Camera</option>
+                        <option value="Ganti Speaker">Ganti Speaker</option>
+                        <option value="Ganti Mic">Ganti Mic</option>
+                    </select>
+                </div>
+                <button type="button" id="btnHitung" class="btn btn-info mb-3">Hitung Harga</button>
+                <div class="mb-3">
+                    <label for="totalHarga" class="form-label">Total Harga Service:</label>
+                    <input type="text" id="totalHarga" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="nomorHp" class="form-label">Nomor Handphone:</label>
+                    <input type="text" id="nomorHp" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat:</label>
+                    <input type="text" id="alamat" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Data</button>
+            </form>
+            <p id="validasiPesanan">Data masih kosong!</p>
+        </section>
+
+        <section>
+            <h3>Riwayat Permintaan Service</h3>
+            <table id="tabelRiwayat" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Tanggal Servis</th>
+                        <th>Jenis Device</th>
+                        <th>Jenis Layanan</th>
+                        <th>Keluhan</th>
+                        <th>Nomor Handphone</th>
+                        <th>Alamat</th>
+                        <th>Total Harga</th>
+                    </tr>
+                </thead>
+                <tbody id="isiTabelRiwayat">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>

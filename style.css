@@ -1,0 +1,36 @@
+#tabelRiwayat {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#tabelRiwayat th,
+#tabelRiwayat td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.slogan {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: #6FCF97;
+}
+
+body {
+    margin: 10px;
+    padding: 10px;
+    background-color: #EEEEEE;
+}
+
+h1 {
+    text-align: center;
+    color: #2FA084;
+}
+
+h2 {
+    color: #6FCF97;
+}
+
+h3 {
+    color: #215E61;
+}
